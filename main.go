@@ -19,7 +19,7 @@ var (
 )
 
 func fatal(err error) {
-	fmt.Fprintf(os.Stderr, "%s: %s", os.Args[0], os.Stderr, err)
+	fmt.Fprintf(os.Stderr, "%s: %s", os.Args[0], err)
 	os.Exit(1)
 }
 
