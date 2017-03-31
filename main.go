@@ -15,7 +15,7 @@ var (
 	header = flag.Bool("header", true, "use header")
 	field  = flag.String("field", "", "collect field")
 	raw    = flag.Bool("raw", false, "raw string")
-	obj    = flag.Bool("obj", false, "output object")
+	obj    = flag.Bool("obj", true, "output object")
 )
 
 func fatal(err error) {
