@@ -4,8 +4,28 @@ CSV/JSON converter
 
 ## Usage
 
+Read CSV from stdin, Writer JSON to stdout.
+
 ```
-$ cat mytweets.csv | csv2json -f text
+Usage of csv2json:
+  -field string
+        collect field
+  -header
+        use header (default true)
+  -obj
+        output object
+  -raw
+        raw string
+```
+
+list tweet texts
+```
+$ cat mytweets.csv | csv2json -raw -f text
+```
+
+convert CSV to JSON, and format with jq
+```
+$ cat mytweets.csv | csv2json | jq .
 ```
 
 ## Installation
