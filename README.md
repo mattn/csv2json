@@ -13,7 +13,7 @@ Usage of csv2json:
   -header
         use header (default true)
   -obj
-        output object
+        output object (default true)
   -raw
         raw string
 ```
