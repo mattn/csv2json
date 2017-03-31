@@ -26,9 +26,6 @@ func fatal(err error) {
 func main() {
 	flag.Parse()
 
-	if *obj && !*header {
-		fatal(errors.New("-obj and -header both should be specified"))
-	}
 	if *obj && *raw {
 		fatal(errors.New("-obj and -raw both should not be specified"))
 	}
