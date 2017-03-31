@@ -76,8 +76,11 @@ func main() {
 			out := make(map[string]string)
 			if len(ff) > 0 {
 				for _, fi := range ff {
-					i := fm[fi]
-					out[fi] = record[i]
+					if i, ok := fm[fi]; ok {
+						out[fi] = record[i]
+					} else {
+						out[fi] = ""
+					}
 				}
 			} else {
 				for k, v := range fm {
@@ -93,8 +96,11 @@ func main() {
 			if len(ff) > 0 {
 				out := []string{}
 				for _, fi := range ff {
-					i := fm[fi]
-					out = append(out, record[i])
+					if i, ok := fm[fi]; ok {
+						out = append(out, record[i])
+					} else {
+						out = append(out, "")
+					}
 				}
 				record = out
 			}
